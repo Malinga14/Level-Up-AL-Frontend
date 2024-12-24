@@ -1,0 +1,73 @@
+<div class="container-fluid">
+    <h1 class="text-center my-4">Profile Details</h1>
+    <div class="row justify-content-end mb-3" id="editIcon">
+        <div class="col-auto">
+            <div class="btn" id="iconbtn">
+                <i class="bi bi-pencil-square" id="icon"></i>
+            </div>    
+        </div>
+    </div>
+    <form>
+        <div class="row g-4">
+            <div class="col-12 col-md-8">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="name" placeholder="username" value="{{student.name}}">
+                    <label for="name">Name</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="username" placeholder="username" value="{{student.username}}">
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="school" placeholder="school" value="{{student.school}}">
+                    <label for="school">School</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating">
+                    <input type="int" class="form-control" id="phoneNumber" placeholder="phone no" value="{{student.phoneNo}}">
+                    <label for="phoneNumber">Phone No</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="form-floating">
+                    <input type="date" class="form-control" id="dob" placeholder="dob" value="{{student.dob}}">
+                    <label for="dob">Date Of Birth</label>
+                </div>
+            </div>
+            <div class="col-12 ">
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="e-mail" value="{{student.email}}">
+                    <label for="email">E-mail</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="currentPassword" placeholder="current password" value="{{student.password}}">
+                    <label for="currentPassword">Current Password</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="newPassword" placeholder="new password">
+                    <label for="newPassword">New Password</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="confirmNewPassword" placeholder="confirm new password">
+                    <label for="confirmNewPassword">Confirm New Password</label>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col text-center">
+                <button type="button" class="btn" id="saveBtn">Save Changes</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+#container{
+    text-align: center;
+}
+
+#welcome{
+    background: transparent;
+    color: rgb(2, 33, 60);
+    font-weight: 600px;
+    font-size: 160px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+p{
+    color: rgb(2, 33, 60);
+    text-align: justify;
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1
+}

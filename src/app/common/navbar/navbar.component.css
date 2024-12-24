@@ -1,0 +1,166 @@
+#navbar{
+    border-radius: 30px;
+    backdrop-filter: blur(200px);
+}
+
+#btntoggle{
+    border-radius: 30px;
+}
+
+#icon{
+    font-size: 2rem;
+}
+
+#navbar{
+    border: 1px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 30px;
+}
+
+#nav-txt{
+    color: rgb(2, 33, 60);
+    transition: transform 0.3s ease;
+}
+
+#nav-txt:hover{
+    transform: scale(1.2); 
+}
+
+#nav-brand{
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgb(2, 33, 60);
+}
+
+#lsbtn1{
+    color: rgb(2, 33, 60);
+    transition: transform 0.3s ease;
+}
+
+#lsbtn1:hover{
+    transform: scale(1.2); 
+}
+
+#lsbtn2{
+  color: rgb(2, 33, 60);
+  transition: transform 0.3s ease;
+}
+
+#lsbtn2:hover{
+  transform: scale(1.2); 
+}
+
+#icon{
+    transition: transform 0.3s ease;
+    color: rgb(2, 33, 60);
+}
+
+#icon:hover{
+    transform: scale(1.2); 
+}
+
+#btnlogin {
+    width: 30%;
+    height: 45px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+ #btnlogin:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  }
+  
+  .link {
+    font-size: 14px;
+    text-align: center;
+    color: #000;
+    margin: 20px 0 10px;
+  }
+  
+  .link a {
+    color: #4070f4;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  #inputs{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+  }
+  
+#inputs input {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 23px;
+    transition: 0.5s;
+  }
+
+#inputs input:focus,
+#inputs input:valid {
+  border-color: #4070f4;
+}
+
+#inputs label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #000;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+#inputs input:focus ~ label,
+#inputs input:valid ~ label {
+  top: -5px;
+  color: #4070f4;
+}
+
+#inputs i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+#inputs input:focus ~ i,
+#inputs input:valid ~ i {
+  color: #4070f4;
+}
+
+#exampleModal{
+    text-align: center;
+    position: absolute;
+    background: transparent;
+}
+
+#input-form{
+    justify-items: center;
+}
+
+.modal-footer{
+    
+}
+

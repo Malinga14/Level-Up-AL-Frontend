@@ -1,0 +1,42 @@
+.container{
+  background-color:  white;
+  border-radius: 20px;
+}
+
+h1{
+  font-weight: bold;
+  text-align: center;
+}
+
+#editIcon{
+  justify-self: right;
+}
+
+#icon{
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+  
+}
+#iconbtn{
+  transition: transform 0.3s ease;
+  border: none;
+}
+
+#iconbtn:hover{
+  transform: scale(1.2); 
+}
+
+#saveBtn{
+  font-weight: 500;
+  font-size: 1.5rem;
+  background-color: #212529;
+  border-radius: 30px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+#saveBtn:hover{
+  transform: scale(1.2); 
+}
+

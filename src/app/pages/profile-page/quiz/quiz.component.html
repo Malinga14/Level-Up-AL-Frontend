@@ -1,0 +1,39 @@
+
+
+
+<h1>{{quiz.topic}}</h1>
+<br><br>
+<h3>{{quiz.question}}</h3>
+<br><br>
+
+
+<div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="answer1" [(ngModel)]="selectedOption.answer_1" value="{{quiz.answer_1}}">
+    <label class="form-check-label" for="answer1">
+        {{quiz.answer_1}}
+    </label>
+</div>
+<div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="answer2" [(ngModel)]="selectedOption.answer_2" value="{{quiz.answer_2}}">
+    <label class="form-check-label" for="answer2">
+        {{quiz.answer_2}}
+    </label>
+</div>
+<div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="answer3" [(ngModel)]="selectedOption.answer_3" value="{{quiz.answer_3}}">
+    <label class="form-check-label" for="answer3">
+        {{quiz.answer_3}}
+    </label>
+</div>
+<div class="form-check mb-3">
+    <input class="form-check-input" type="radio" name="exampleRadios" id="answer4" [(ngModel)]="selectedOption.answer_4" value="{{quiz.answer_4 }}">
+    <label class="form-check-label" for="answer4">
+        {{quiz.answer_4 }}
+    </label>
+</div>
+
+<div class="btn" (click)="getQuiz()">Next Question</div>
+
+<br><br><br>
+
+<h1>{{result}}</h1>

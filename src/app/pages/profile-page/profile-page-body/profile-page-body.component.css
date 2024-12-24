@@ -1,0 +1,27 @@
+.nav-link{
+    font-size: 1.5rem;
+    padding: 30px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+  }
+
+#icon{
+    font-size: 4rem;
+}
+
+#side-bar-container {
+    border-right: 1px solid #ddd;
+}
+
+#side-bar {
+    max-height: min-content;
+}
+
+#side-bar .nav-link {
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;    /* Hide any overflow */
+    text-overflow: ellipsis; /* Add "..." if the text overflows */
+}

@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg " id="navbar">
+  <div class="container-fluid">
+    <h1 class="navbar-brand col-md-4 mb-2 mb-md-0" id="nav-brand">LEVELUP AL'S</h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="btntoggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-1 justify-content-center"> 
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="nav-txt" routerLink="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="nav-txt" routerLink="papers">Papers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="nav-txt">Results</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="nav-txt">Upcoming</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="nav-txt" routerLink="about-us">About Us</a>
+          </li>
+        </ul>
+        <form class="d-flex col-md-3 text-end" role="sign up">
+          <div class="d-grid gap-2 d-md-flex justify-content-left">
+            <button type="button" class="btn" id="lsbtn1" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</button>
+            <button type="button" class="btn" id="lsbtn2" routerLink="signup">Sign Up</button>
+            <i class="bi bi-person-circle " id="icon" routerLink="profile"></i>
+          </div>
+        </form>     
+    </div>
+  </div>
+</nav>
+
+
+
+<!-----------------------------------login model------------------------------------->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Log In</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="input-form">
+          <div class="mb-3">
+            <div class="input-group">
+              <input type="username" class="form-control" placeholder="E-mail/Username"[(ngModel)]="user.username" name="username"/>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group">
+              <input type="password" class="form-control" placeholder="Password"[(ngModel)]="user.password" name="password"/>
+            </div>
+          </div>
+          <p>Forgot your password? <a href="#" class="signup-link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Click here</a></p>
+          <p>New here? <a href="#" class="signup-link" data-bs-dismiss="modal" routerLink="signup">Sign Up</a></p>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="loginStudent()">Log In</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel2">Fogot Password</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="input-form2">
+          <div class="mb-3">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">
+                <i class="bi bi-lock-fill"></i>
+              </span>
+              <input type="password" class="form-control" placeholder="OTP" required aria-describedby="basic-addon3" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Log In</button>
+      </div>
+    </div>
+  </div>
+</div>

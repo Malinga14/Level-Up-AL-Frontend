@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-12 position-relative">
+            <video autoplay loop muted playsinline class="bg-video w-100 h-100 object-cover">
+                <source src="blue color drop.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="card col-11 col-sm-10 col-md-8 col-lg-6 p-4 position-absolute" style="z-index: 1;">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Sign Up</h2>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Name" [(ngModel)]="student.name" required />
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="School" [(ngModel)]="student.school"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Phone no" [(ngModel)]="student.phoneNo"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <input type="date" class="form-control" [(ngModel)]="student.dob" required />
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="E-mail" [(ngModel)]="student.email"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Username" [(ngModel)]="student.username"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="student.password"
+                        required />
+                </div>
+
+                <div class="text-center">
+                    <p>Have an account? <a href="#" class="signup-link" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Log in</a></p>
+                    <button class="btn btn-primary" type="button" (click)="addStudent()">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

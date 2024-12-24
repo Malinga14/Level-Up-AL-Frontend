@@ -1,0 +1,316 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "OpenAPI definition",
+        "version": "v0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8080",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/student/update-student": {
+            "put": {
+                "tags": [
+                    "student-controller"
+                ],
+                "operationId": "updateStudent",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Student"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "202": {
+                        "description": "Accepted"
+                    }
+                }
+            }
+        },
+        "/admin/update-admin": {
+            "put": {
+                "tags": [
+                    "admin-controller"
+                ],
+                "operationId": "updateAdmin",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Admin"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "202": {
+                        "description": "Accepted"
+                    }
+                }
+            }
+        },
+        "/student/add-student": {
+            "post": {
+                "tags": [
+                    "student-controller"
+                ],
+                "operationId": "addStudent",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Student"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/admin/add-admin": {
+            "post": {
+                "tags": [
+                    "admin-controller"
+                ],
+                "operationId": "addAdmin",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Admin"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/student/search-student-by-id/{id}": {
+            "get": {
+                "tags": [
+                    "student-controller"
+                ],
+                "operationId": "getStudentById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Student"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/student/get-student": {
+            "get": {
+                "tags": [
+                    "student-controller"
+                ],
+                "operationId": "getStudent",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Student"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/admin/search-admin-by-id/{id}": {
+            "get": {
+                "tags": [
+                    "admin-controller"
+                ],
+                "operationId": "getAdminById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Admin"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/admin/get-admin": {
+            "get": {
+                "tags": [
+                    "admin-controller"
+                ],
+                "operationId": "getAdmin",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Admin"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/student/delete-student-by-id/{id}": {
+            "delete": {
+                "tags": [
+                    "student-controller"
+                ],
+                "operationId": "deleteStudentById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted"
+                    }
+                }
+            }
+        },
+        "/admin/delete-admin-by-id/{id}": {
+            "delete": {
+                "tags": [
+                    "admin-controller"
+                ],
+                "operationId": "deleteAdminById",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "202": {
+                        "description": "Accepted"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Student": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "username": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "dob": {
+                        "type": "string"
+                    },
+                    "phoneNo": {
+                        "type": "string"
+                    },
+                    "school": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Admin": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "phoneNo": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

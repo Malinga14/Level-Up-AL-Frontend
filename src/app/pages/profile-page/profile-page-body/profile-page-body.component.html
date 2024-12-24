@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 col-md-2 vh-100" id="side-bar-container">
+            <div class="sticky-top py-3 px-2" id="side-bar">
+                <div class="text-center">
+                    <i class="bi bi-person-circle display-4" id="icon"></i>
+                </div>
+                <ul class="nav nav-pills flex-column mt-4">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" routerLink="paper-path">Paper Path</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" routerLink="speed-track">Speed Track</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" routerLink="quiz">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" routerLink="settings">Profile Setting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-8 col-md-10" id="content">
+            <div class="container-fluid">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
